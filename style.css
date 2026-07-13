@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f6f5;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background-color: #2e4a3f; 
+    color: #ffffff;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.title-text {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem 1.5rem;
+}
+
+.main-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #5a6b5c;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.main-text::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #8da490;
+    margin: 0.8rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.map-box {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.world-map {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.map-box a {
+    position: absolute;
+    transform: translate(-50%, -100%); 
+    z-index: 10;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+
+.map-box img[class$="-pin"] {
+    width: 36px;  
+    height: auto;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3)); 
+}
+
+
+.map-box a:hover {
+    transform: translate(-50%, -110%) scale(1.15); 
+    filter: brightness(1.2); 
+}
+
+.iriomote {
+    top: 40%;
+    left: 37%;
+}
+
+.tasmanian_devil {
+    top: 67%;
+    left: 42%;
+}
+
+.komodo_dragon {
+    top: 53%;
+    left: 35%;
+}
+
+.wooperLooper {
+    top: 55%;
+    left: 76%; 
+}
+
+.footer {
+    background-color: #22332a;
+    color: #a3b8ab;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
