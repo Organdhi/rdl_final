@@ -1,29 +1,37 @@
 .header {
     background-color: #2e4a3f; 
     color: #ffffff;
-    padding: 2.5rem 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height:50px;
-    z-index: 9999;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
 
-}
-.title{
-    height: 310px;
+.header-inner {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
+.toggle-menu-button {
+    display: none;
+}
+
 .title-text {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 0.05em;
+}
+
+.header-site-menu {
+    display: none;
+}
+
+.title {
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title h1 {
@@ -35,6 +43,24 @@
 .title p {
     font-size: 14px;
     margin-top: 15px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #2e4a3f;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .feature {
@@ -49,16 +75,31 @@
     align-items: flex-start;
 }
 
-.feature-inner {
+.feature iframe {
+    flex: 1;
+    min-width: 0;
+    height: 300px;
+    border: 0;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
     max-width: 500px;
     margin-right: 40px;
 }
 
-.feature-inner h2 {
+.reverse .feature-text {
+    margin-left: 40px;
+    margin-right: 0;
+}
+
+.feature-text h2 {
     font-size: 22px;
     font-weight: bold;
     line-height: 30px;
-    text-decoration: underline;
 }
 
 .feature-text h2::after {
@@ -66,14 +107,36 @@
     display: block;
     width: 36px;
     height: 3px;
-    background-color: #000000;
+    background-color: #2e4a3f;
     margin-top: 20px;
+}
+
+.feature-text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.feature-text h3::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #2e4a3f;
+    margin-top: 15px;
 }
 
 .feature-text p {
     font-size: 15px;
     line-height: 28px;
-    margin-top: 25px;
+    margin-top: 20px;
+}
+
+.feature-text ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 32px;
 }
 
 .footer {
@@ -86,6 +149,6 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height:50px;
+    height: 50px;
     z-index: 9999;
 }

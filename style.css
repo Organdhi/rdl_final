@@ -128,7 +128,7 @@ img {
     margin-bottom: 16px;
 }
 
-.wooper-img {
+.mexican_salamander-img {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -185,7 +185,7 @@ img {
     left: 38%;
 }
 
-.wooperLooper {
+.mexican_salamander {
     top: 53%;
     left: 76%; 
 }
@@ -279,7 +279,7 @@ img {
         height: 160px;
     }
 
-    .wooper-img {
+    .mexican_salamander-img {
         width: 160px;
         height: 160px;
     }
@@ -352,17 +352,13 @@ img {
     left: 40.5%;
 }
 
-.tasmanian_devil {
-    top: 76%;
-    left: 45.5%;
-}
 
 .komodo_dragon {
     top: 64%;
     left: 38%;
 }
 
-.wooperLooper {
+.mexican_salamander {
     top: 55%;
     left: 76%; 
 }
