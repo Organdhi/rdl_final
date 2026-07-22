@@ -5,24 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="絶滅危惧種の動物達">
     <link rel="stylesheet" href="./style.css">
+    <script src="./toggle-menu.js"></script>
     <title>絶滅危惧種の動物達</title>
 </head>
 <body>
     <header class="header">
-        <h1 class="title-text">特定地域にしかいない絶滅危惧種</h1>
+        <div class="header-inner">
+            <h1 class="title-text">絶滅危惧種の動物達</h1>
+            <button class="toggle-menu-button"></button>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                        <li><a href="#">動物一覧</a></li>
+                        <li><a href="#map-box">マップ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     <main class="main">
-        <p class="main-text">index.htmlの説明書き</p>
-        <div class="map-box">
-            <a class="iriomote" href="./animal/iriomoteyamaneko/iriomote.html"><img src="./images/pin_icon.png" class="iriomote-pin" alt="ピン"></a>
-            <a class="wooperLooper" href="./animal/wooperLooper/wooperLooper.html"><img src="./images/pin_icon.png" class="wooperLooper-pin" alt="ピン"></a>
-            <a class="komodo_dragon" href="./animal/komodo_dragon/komodo_dragon.html"><img src="./images/pin_icon.png" class="komodo_dragon-pin" alt="ピン"></a>
-            <a class="tasmanian_devil" href="./animal/tasmanian_devil/tasmanian_devil.html"><img src="./images/pin_icon.png" class="tasmanian_devil-pin" alt="ピン"></a>
+        <p class="main-text">特定地域にしかいない絶滅危惧種</p>
+        <section class="animal-list">
+            <div class="animals">
+                <a href="./animal/iriomoteyamaneko/iriomote.html">
+                    <div class="animal">
+                        <img class="iriomote-img" src="./animal/iriomoteyamaneko/mayaneko_1.jpg" alt="イリオモテヤマネコ">
+                        <p class="animal-name">イリオモテヤマネコ</p>
+                    </div>    
+                </a>
+                <a href="./animal/komodo_dragon/komodo_dragon.html">
+                    <div class="animal">
+                        <img class="komodo-img" src="./animal/komodo_dragon/komodo_dragon.jpg" alt="コモドドラゴン">
+                        <p class="animal-name">コモドドラゴン</p>
+                    </div>    
+                </a>
+                <a href="./animal/wooperLooper/wooperLooper.html">
+                    <div class="animal">
+                        <img class="wooper-img" src="./animal/wooperLooper/wooper_1.jpeg" alt="メキシコサンショウウオ">
+                        <p class="animal-name">メキシコサンショウウオ</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="map-box" id="map-box">
             <img src="./images/world_map.jpg" class="world-map" alt="世界地図">
-        </div>
+            <div class="pin">
+                <a class="iriomote" href="./animal/iriomoteyamaneko/iriomote.html"><img src="./images/pin_icon.png" class="iriomote-pin" alt="ピン"></a>
+                <a class="wooperLooper" href="./animal/wooperLooper/wooperLooper.html"><img src="./images/pin_icon.png" class="wooperLooper-pin" alt="ピン"></a>
+                <a class="komodo_dragon" href="./animal/komodo_dragon/komodo_dragon.html"><img src="./images/pin_icon.png" class="komodo_dragon-pin" alt="ピン"></a>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-        <p>何かしらの要素</p>
+        <p class="copyright">
+            <small>© 2026 名城大学情報工学部</small>
+        </p>
     </footer>
 </body>
 </html>
