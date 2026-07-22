@@ -10,9 +10,9 @@
 
 body {
     font-family: sans-serif;
-    background-color: #f4f6f5;
-    color: #2c3e50;
-    line-height: 1.6;
+    background-color: #f6f4ee;
+    color: #2c3830;
+    line-height: 1.7;
 }
 
 a {
@@ -20,12 +20,26 @@ a {
     color: inherit;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .header {
     background-color: #2e4a3f; 
     color: #ffffff;
-    padding: 2.5rem 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-menu-button {
+    display: none;
 }
 
 .title-text {
@@ -35,6 +49,241 @@ a {
     letter-spacing: 0.05em;
 }
 
+.header-site-menu {
+    display: none;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem 1.5rem;
+}
+
+.main-text {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #5c6b60;
+    margin-bottom: 0 auto 3rem;
+}
+
+.main-text::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 3px;
+    background-color: #8da490;
+    margin: 0.8rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.animal-list {
+    margin-bottom: 4rem;
+}
+
+.animal-list::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 3px;
+    background-color: #8da490;
+    margin: 0.8rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.animals {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    gap: 2rem;
+}
+
+.animals a {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.animal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+}
+
+.iriomote-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.komodo-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.wooper-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    object-position:  left center;
+}
+
+.animal-name {
+    text-align: center;
+    font-weight: 500;
+}
+
+.map-box {
+    position: relative;
+    max-width: 1000px;
+    margin: 4px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.world-map {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.pin a {
+    position: absolute;
+    transform: translate(-50%, -100%); 
+    transition: transform 0.2s ease;
+}
+
+
+.pin img {
+    width: 36px;  
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3)); 
+}
+
+.pin a:hover {
+    transform: translate(-50%, -110%) scale(1.15); 
+    filter: brightness(1.2); 
+}
+
+.iriomote {
+    top: 50%;
+    left: 40.5%;
+}
+
+.komodo_dragon {
+    top: 64%;
+    left: 38%;
+}
+
+.wooperLooper {
+    top: 53%;
+    left: 76%; 
+}
+
+.footer {
+    background-color: #22332a;
+    color: #a3b8ab;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        margin-bottom: 0;
+        padding: 1rem 1.25rem;
+    }
+
+    .header-inner {
+        justify-content: space-between;
+    }
+
+    .title-text {
+        font-size: 1.3rem;
+    }
+
+    .toggle-menu-button {
+        display: block;
+        width: 44px;
+        height: 34px;
+        background-image: url(./images/icon-menu.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+
+    .header-site-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1c2e26;
+        padding: 1.5rem 0 2.5rem;
+    }
+
+    .header-site-menu.is-show {
+        display: block;
+    }
+
+    .site-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .site-menu li {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .main {
+        padding-top: 130px;
+    }
+
+    .animals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animals a {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .iriomote-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .komodo-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .wooper-img {
+        width: 160px;
+        height: 160px;
+    }
+}
 .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -99,18 +348,18 @@ a {
 }
 
 .iriomote {
-    top: 40%;
-    left: 37%;
+    top: 51%;
+    left: 40.5%;
 }
 
 .tasmanian_devil {
-    top: 67%;
-    left: 42%;
+    top: 76%;
+    left: 45.5%;
 }
 
 .komodo_dragon {
-    top: 53%;
-    left: 35%;
+    top: 64%;
+    left: 38%;
 }
 
 .wooperLooper {
